@@ -1,4 +1,6 @@
 .idea
+.gradle
+build
 *.class
 
 # Created by https://www.toptal.com/developers/gitignore/api/eclipse

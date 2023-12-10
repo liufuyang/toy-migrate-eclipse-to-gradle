@@ -10,13 +10,7 @@
 
 // Define plugins
 plugins {
-    id("application")
-}
-
-// Plugin extension
-java {
-    // set target java version
-    toolchain.languageVersion.set(JavaLanguageVersion.of(11))
+    id("p-java-application") // local convention plugin
 }
 
 dependencies {
@@ -28,15 +22,4 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("com.p2.P2")
-}
-
-sourceSets {
-    main {
-        java {
-            setSrcDirs(listOf("src"))
-        }
-        resources {
-            setSrcDirs(listOf("src/resources"))
-        }
-    }
 }

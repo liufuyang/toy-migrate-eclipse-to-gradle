@@ -8,14 +8,13 @@
 
 // Define plugins
 plugins {
-    id("java-library")
+    // Plugins include Core-Plugins, Community Plugins with own version, Local defined convention plugins
+    id("p-java-library") // local convention plugin
 }
 
-// Plugin extension
-java {
-    // set target java version
-    toolchain.languageVersion.set(JavaLanguageVersion.of(11))
-}
+group = "org.example" // A company name, for example, `org.jetbrains`
+version = "1.0-SNAPSHOT" // Version to assign to the built artifact
+
 
 dependencies {
     implementation(fileTree("../../distr") {include("*.jar")})
@@ -23,13 +22,6 @@ dependencies {
     // implementation("org.apache.commons:commons-lang3:3.9")
 }
 
-sourceSets {
-    main {
-        java {
-            setSrcDirs(listOf("src"))
-        }
-        resources {
-            setSrcDirs(listOf("src/resources"))
-        }
-    }
-}
+//tasks.test {
+//    useJUnitPlatform() // JUnitPlatform for tests.
+//}

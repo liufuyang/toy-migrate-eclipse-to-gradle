@@ -2,16 +2,12 @@ rootProject.name = "g1"
 
 pluginManagement {
     repositories {
-        // gradlePluginPortal()
+        gradlePluginPortal()
         // google()
-        // includeBuild("build-logic")
     }
+     includeBuild("../build-logic")
 }
 
-// settings plugins - share configuration among several builds
-plugins {
-
-}
 
 dependencyResolutionManagement {
     repositories {
